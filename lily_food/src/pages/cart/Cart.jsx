@@ -2,7 +2,7 @@ import React from 'react'
 import { productCart } from '../../components/HomeMenu'
 import { useState, useRef } from 'react'
 import { close } from '../../assets'
-import PlacedOrder from '../../components/placedOrder'
+import PlacedOrder from '../../components/PlacedOrder'
 
 const Cart = () => {
   const [realProductCart, setRealProductCart] = useState(productCart)
