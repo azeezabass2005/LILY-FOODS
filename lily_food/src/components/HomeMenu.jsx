@@ -52,9 +52,9 @@ const HomeMenu = () => {
                 Can&apos;t find what you are looking for? 
             </h3>
             <button className='w-[200px] sm:p-7 p-4 bg-[#00d084] rounded-[10px] text-[#fff] text-[1.3rem]'>
-                <a href="/menu">
+                <Link to='/menu'>
                     See more
-                </a>
+                </Link>
             </button>
         </div>
     </div>

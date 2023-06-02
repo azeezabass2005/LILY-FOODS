@@ -26,7 +26,7 @@ const filterSearch = (e) => {
   }
 
   const filteredProduct = products.filter((item) => {
-    return item.name.toLowerCase().includes(value)
+    return item.name.toLowerCase().includes(value.toLowerCase())
   })
 
   setFilteredProducts(filteredProduct)
@@ -47,7 +47,7 @@ const filterSearch = (e) => {
           </Link>
           <div className=' sm:flex hidden flex-col relative'>
             <input type="search" placeholder='search' className='h-[40px] px-7 mt-5 outline-none' onChange={filterSearch} />
-            <div className={`w-full bg-[#fff] form-shadow ${searchItemBox ? 'flex' : 'hidden'} p-4 rounded-b-[10px] flex-col gap-[.5rem] h-[400px] overflow-auto absolute top-[60px]`}>
+            <div className={`w-full bg-[#fff] form-shadow ${searchItemBox ? 'flex' : 'hidden'} p-4 rounded-b-[10px] flex-col gap-[.5rem] max-h-[400px] overflow-auto absolute top-[60px]`}>
                   {filteredProducts.map((product, index) => (
                     <a key={index} href={`/menu#${product.name}`} onClick={() => setSearchItemBox(false)} className='flex justify-between items-center cursor-pointer'>
                       <img src={product.img} alt="product.name" className='h-[60px] w-[60px] rounded-full' />
@@ -56,6 +56,9 @@ const filterSearch = (e) => {
                       </p>
                     </a>
                   ))}
+                  <p className={`italic ${filteredProducts.length === 0 ? 'flex' : 'hidden'}`}>
+                    Oops no product found
+                  </p>
             </div>
           </div>
           <div className='lg:justify-between justify-center items-center gap-[3rem] flex-wrap md:flex hidden'>
@@ -123,7 +126,7 @@ const filterSearch = (e) => {
       </div>
       <div className=' sm:hidden flex flex-col'>
         <input type="search" placeholder='search' className='w-[100%] h-[40px] px-7 mt-5 outline-none' onChange={filterSearch} />
-        <div className={`w-full bg-[#fff] form-shadow ${searchItemBox ? 'flex' : 'hidden'} p-4 rounded-b-[10px] flex-col gap-[.5rem] h-[400px] overflow-auto`}>
+        <div className={`w-full bg-[#fff] form-shadow ${searchItemBox ? 'flex' : 'hidden'} p-4 rounded-b-[10px] flex-col gap-[.5rem] max-h-[400px] overflow-auto`}>
               {filteredProducts.map((product, index) => (
                 <a key={index} href={`/menu#${product.name}`} onClick={() => setSearchItemBox(false)} className='flex justify-between items-center cursor-pointer'>
                   <img src={product.img} alt="product.name" className='h-[60px] w-[60px] rounded-full' />
@@ -132,6 +135,9 @@ const filterSearch = (e) => {
                   </p>
                 </a>
               ))}
+              <p className={`italic ${filteredProducts.length === 0 ? 'flex' : 'hidden'}`}>
+                Oops no product found
+              </p>
         </div>
       </div>
     </nav>
