@@ -3,6 +3,7 @@ import { productCart } from '../../components/HomeMenu'
 import { useState, useRef } from 'react'
 import { close } from '../../assets'
 import PlacedOrder from '../../components/PlacedOrder'
+import { Link } from 'react-router-dom'
 
 const Cart = () => {
   const [realProductCart, setRealProductCart] = useState(productCart)
@@ -66,9 +67,9 @@ const Cart = () => {
           Oops you don't have any products on your cart would you love to add some products
         </h3>
         <button className='w-[200px] sm:p-7 p-4 bg-[#00d084] rounded-[10px] text-[#fff] text-[1.3rem]'>
-          <a href="/menu">
+          <Link to="/menu">
             See Products
-          </a>
+          </Link>
         </button>
       </div>
     </div>
