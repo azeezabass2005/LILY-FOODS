@@ -9,7 +9,7 @@ const About = () => {
         <h2 className='sm:text-[2.8rem] text-[2.5rem] text-primary-gradient font-semibold lg:mt-10'>
           About Us
         </h2>
-        <p className='text-[20px] text-center sm:text-[24px] text-[#248d22]'>
+        <p className='text-[20px] text-center sm:text-[24px] text-[#000]'>
           We offer a wide range of opportunity for you. See <br className='sm:flex hidden'/>what you will get and your benefits
         </p>
       </div>
@@ -26,7 +26,7 @@ const About = () => {
         <h2 className='sm:text-[2.8rem] text-[2.5rem] text-primary-gradient font-semibold whitespace-nowrap'>
           What We Do
         </h2>
-        <p className='text-[20px] sm:text-[24px] text-[#248d22] sm:leading-[40px]'>
+        <p className='text-[20px] sm:text-[24px] text-[#000] sm:leading-[40px]'>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus laborum dolore iste fugiat cum maxime, mollitia libero quae iure exercitationem, animi ad. Ullam voluptatem hic voluptates minus earum maxime tenetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias esse quis quae tempore praesentium labore beatae tenetur amet, possimus autem dolorem fugit facere fugiat quasi maiores itaque porro. Eveniet, similique.
         </p>
 

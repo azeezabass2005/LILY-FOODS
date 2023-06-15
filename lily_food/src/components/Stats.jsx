@@ -3,12 +3,12 @@ import { stats } from '../constants'
 
 const Stats = () => {
   return (
-    <div className='flex justify-center sm:justify-around flex-wrap items-center bg-[#abf0b3] sm:p-10 p-10 rounded-tl-[120px] rounded-br-[120px] sm:w-[80vw] gap-[2rem] my-10 sm:my-20'>
+    <div className='flex justify-center sm:justify-around flex-wrap items-center bg-[#dab9f9] sm:p-10 p-10 rounded-tl-[120px] rounded-br-[120px] sm:w-[80vw] gap-[2rem] my-10 sm:my-20'>
         {stats.map((stat, index) => (
             <div key={index} className='flex justify-center items-center flex-col p-5 gap-[1rem]'>
                 <h1 className='text-[2rem] sm:text-[3rem] font-semibold'>
                     {stat.value}
-                    <span className='text-[#38E54D]'>
+                    <span className='text-[blueviolet]'>
                         {stat.unit}
                     </span>
                 </h1>

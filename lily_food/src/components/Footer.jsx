@@ -1,21 +1,21 @@
 import React from 'react'
-import { logo } from '../assets'
+import Logo from './Logo'
 import { Link } from 'react-router-dom'
 import { facebooklogo, instagramlogo, twitterlogo, linkedinlogo, location, call } from '../assets'
 
 const Footer = () => {
     //+971524506575
   return (
-    <div className='bg-[#00d084]'>
-        <div className='bg-[#00d084] p-3 flex justify-around flex-wrap'>
+    <div className='bg-[#8a2be2]'>
+        <div className='bg-[#8a2be2] md:px-20 p-3 flex justify-around flex-wrap'>
             <div className='flex flex-col justify-center items-center'>
                 <div className='flex items-center gap-[1rem] p-2'>
-                    <img src={logo} alt="LILY FOODS"  className='h-[50px] w-[50px] object-contain'/>
+                    <Logo />
                     <p className='text-[1.5rem] text-[#fff]'>
                         LILY FOODS
                     </p>
                 </div>
-                <div className='flex gap-[1rem]'>
+                <div className='flex gap-[1rem] m-5'>
                     <img src={facebooklogo} alt="facebooklogo" className='h-[25px] w-[25px] object-contain' />
                     <img src={twitterlogo} alt="twitterlogo" className='h-[25px] w-[25px] object-contain' />
                     <img src={instagramlogo} alt="instagramlogo" className='h-[25px] w-[25px] object-contain' />
@@ -54,7 +54,7 @@ const Footer = () => {
         </div>
         <div className='text-center text-[#fff] border-t-2 border-dashed border-white p-4'>
             <p>
-                &copy;2023 lily foods
+                &copy;&nbsp;2023 lily foods
             </p>
         </div>
     </div>

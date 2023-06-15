@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { BrowserRouter, Route, Routes  } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Home from './pages/home/Home'
@@ -11,15 +11,18 @@ import BackToTop from './components/BackToTop'
 import LoginSignup from './pages/login_signup/LoginSignup'
 
 const App = () => {
+
+  const [productInCart, setProductInCart] = useState([])
+  const [numberInCart, setNumberInCart] = useState(productInCart.length)
   return (
     <BrowserRouter>
-      <Navbar/>
+      <Navbar numberInCart={ numberInCart } />
       <Routes>
-        <Route index element={<Home />}/>
-        <Route path='menu' element={<Menu />} />
+        <Route index element={<Home numberInCart = { numberInCart } setNumberInCart = { setNumberInCart } productInCart = { productInCart } setProductInCart = { setProductInCart } />}/>
+        <Route path='menu' element={<Menu numberInCart = { numberInCart } setNumberInCart = { setNumberInCart } productInCart = { productInCart } setProductInCart = { setProductInCart } />} />
         <Route path='about' element={<About />} />
         <Route path='contact' element={<Contact />} />
-        <Route path='cart' element={<Cart />} />
+        <Route path='cart' element={<Cart numberInCart = { numberInCart } setNumberInCart = { setNumberInCart } productInCart = { productInCart } setProductInCart = { setProductInCart } />} />
         <Route path='login_signup' element={<LoginSignup />} />
       </Routes>
       {/* <BackToTop /> */}

@@ -20,14 +20,14 @@ body {
 /* #00d084 remember this color when next you need a cool green you can't use it for this project again */
 
 .text-primary-gradient {
-  background: linear-gradient(67deg, #00d084, rgb(63, 235, 195), #00d084);
+  background: linear-gradient(67deg, #8a2be2, #ba04f7, blueviolet);
   background-clip: text;
   -webkit-text-fill-color: transparent;
   text-fill-color: transparent;
 }
 
 .bg-gradient {
-  background: linear-gradient(67deg, #00d084, #86eb91, #00d084);
+  background: linear-gradient(160deg, #8a2be2, #a665e4, #8a2be2);
 }
 
 .mobile-navbar {
@@ -47,7 +47,7 @@ body {
 }
 
 .hero-radius {
-  background: linear-gradient(67deg, #00d084, #4ddda8, #00d084);
+  background: linear-gradient(67deg, #8a2be2, #8a2be2);
 }
 
 .emoji-animate {
@@ -74,7 +74,71 @@ body {
 }
 
 .product-shadow {
-  box-shadow: 1px 1px 6px 6px rgb(211, 214, 211);
+  box-shadow: 0 0 20px rgb(211, 214, 211);
+}
+
+.cart-button {
+  background: blueviolet;
+  position: relative;
+  border-radius: 10px;
+  animation-name: cart-button;
+  animation-duration: 3s;
+  animation-fill-mode: backwards;
+  animation-iteration-count: infinite;
+}
+
+.cart-button::before {
+  content: '';
+  position: absolute;
+  right: -10px;
+  top: 0;
+  bottom: 0;
+  width: 22%;
+  background: blueviolet;
+  transform: skewX(30deg);
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 8px;
+  animation-name: cart-button;
+  animation-duration: 3s;
+  animation-fill-mode: backwards;
+  animation-iteration-count: infinite;
+}
+
+@keyframes cart-button {
+  0%{
+    background: blueviolet;
+  }
+  20%{
+    background: #d0f;
+  }
+  40%{
+    background: #3249cb;
+  }
+  60%{
+    background: #d0f;
+  }
+  100%{
+    background: blueviolet;
+  }
+}
+
+.order-button {
+  background: #ccaaff;
+  position: relative;
+  border-radius: 10px;
+}
+
+.order-button::before {
+  content: '';
+  position: absolute;
+  left: -9px;
+  top: 0;
+  bottom: 0;
+  width: 28%;
+  background: #ccaaff;
+  transform: skewX(30deg);
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
 
 .form-shadow {
@@ -82,8 +146,69 @@ body {
 }
 
 .bg-about-one {
-  background:linear-gradient(45deg, #00d084, #38E54D, #00d084);
+  background:linear-gradient(45deg, blueviolet, #f0f, blueviolet);
 }
 .bg-about-two {
-  background: linear-gradient(45deg, #ff0, #38E54D, #ff0);
+  background: linear-gradient(45deg, #fa0, blueviolet, #fa0);
+}
+.outstanding {
+  box-shadow: 0px 0px 20px rgba(132, 4, 251, 0.4);
+}
+
+.welcome {
+  animation-name: bien;
+  animation-duration: 4s;
+  animation-iteration-count: 4;
+  animation-delay: 4s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  scale: 0;
+}
+
+@keyframes bien {
+  0%{
+    transform: rotateX(30deg) skewX(30deg);
+    top: 15vh;
+    left: 0vw;
+    background-color: #ba04f7;
+    display: block;
+    visibility: visible;
+    scale: 1;
+  }
+  25%{
+    transform: rotateX(0deg) skewX(0deg);
+    left: 40vw;
+    top: 50vh;
+    background-color: #3249cb;
+    display: block;
+    visibility: visible;
+    scale: 1.5;
+  }
+  50%{
+    transform: rotateX(0deg) skewX(-30deg);
+    top: 70vh;
+    left: 20vw;
+    background-color: #f0f;
+    display: block;
+    visibility: visible;
+    scale: 1.2;
+  }
+  75%{
+    transform: rotateX(0deg) skewX(0);
+    left: 40vw;
+    top: 50vh;
+    background-color: #3249cb;
+    display: block;
+    visibility: visible;
+    scale: 1.5;
+  }
+  100%{
+    transform: rotateX(30deg) skewX(30deg);
+    top: 10vh;
+    left: 5vw;
+    background-color: #ba04f7;
+    display: block;
+    visibility: visible;
+    scale: 0;
+  }
 }
