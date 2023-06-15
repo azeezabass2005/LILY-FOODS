@@ -17,7 +17,7 @@ const Menu = ({ numberInCart, setNumberInCart, productInCart, setProductInCart }
       <div className='flex justify-center items-center flex-wrap ss:gap-[4rem] gap-[1rem]'>
             {products.map((product, index) => (
                 <div key={index} id={product.name} className='bg-[#fff] product-shadow w-[90%] vs:w-[350px] flex flex-col justify-center items-center mt-5 sm:p-4 p-3 rounded-[20px] relative'>
-                    <h3 className='text-[#00d888] font-semibold text-[1.3rem]'>
+                    <h3 className='text-[#8a2be2] font-semibold text-[1.3rem]'>
                         {product.name}
                     </h3>
                     <div className='sm:w-[340px] w-[80%] h-[200px] p-5 '>
