@@ -3,13 +3,9 @@ import { useState, useRef, useEffect } from 'react'
 import { close } from '../../assets'
 import PlacedOrder from '../../components/PlacedOrder'
 import { Link } from 'react-router-dom'
-<<<<<<< HEAD
-const Cart = ({ numberInCart, setNumberInCart, productInCart, setProductInCart }) => {
-=======
 
 const Cart = () => {
   const [realProductCart, setRealProductCart] = useState(productCart)
->>>>>>> 2bf1b1df8692646ce362b76e4a2ee2ef6b028366
   const [showOrderForm, setShowOrderForm] = useState(false)
   const incrementQuantity = (index) => {
     const updatedProductCart = [...productInCart]
@@ -71,11 +67,7 @@ const Cart = () => {
         <h3 className='sm:text-[30px] text-[24px] text-[#000]'>
           Oops you don't have any products on your cart would you love to add some products
         </h3>
-<<<<<<< HEAD
-        <button className='w-[200px] sm:p-7 p-4 bg-[#8a2be2] rounded-[10px] text-[#fff] text-[1.3rem]'>
-=======
         <button className='w-[200px] sm:p-7 p-4 bg-[#00d084] rounded-[10px] text-[#fff] text-[1.3rem]'>
->>>>>>> 2bf1b1df8692646ce362b76e4a2ee2ef6b028366
           <Link to="/menu">
             See Products
           </Link>
